@@ -19,12 +19,16 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.pig4cloud</groupId>
-	<artifactId>pig</artifactId>
+	<groupId>com.earl</groupId>
+	<artifactId>earl</artifactId>
 	<name>${project.artifactId}</name>
-	<version>3.4.1</version>
-	<packaging>pom</packaging>
-	<url>https://www.pig4cloud.com</url>
+	<version>2.0</version>
+    <modules>
+        <module>earl-common</module>
+		<module>earl-register</module>
+		<module>earl-admin</module>
+	</modules>
+    <packaging>pom</packaging>
 
 	<properties>
 		<spring-boot.version>2.5.6</spring-boot.version>
@@ -97,25 +101,8 @@
 		</dependency>
 	</dependencies>
 
-	<modules>
-		<module>pig-register</module>
-		<module>pig-gateway</module>
-		<module>pig-auth</module>
-		<module>pig-upms</module>
-		<module>pig-common</module>
-		<module>pig-visual</module>
-	</modules>
-
 	<dependencyManagement>
 		<dependencies>
-			<!--pigx 公共版本定义-->
-			<dependency>
-				<groupId>com.pig4cloud</groupId>
-				<artifactId>pig-common-bom</artifactId>
-				<version>${project.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
 			<!-- spring boot 依赖 -->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
@@ -202,30 +189,30 @@
 		</pluginManagement>
 		<plugins>
 			<!--打包jar 与git commit 关联插件-->
-			<plugin>
-				<groupId>io.github.git-commit-id</groupId>
-				<artifactId>git-commit-id-maven-plugin</artifactId>
-				<version>${git.commit.plugin}</version>
-				<executions>
-					<execution>
-						<id>get-the-git-infos</id>
-						<goals>
-							<goal>revision</goal>
-						</goals>
-						<phase>initialize</phase>
-					</execution>
-				</executions>
-				<configuration>
-					<failOnNoGitDirectory>false</failOnNoGitDirectory>
-					<generateGitPropertiesFile>true</generateGitPropertiesFile>
-					<!--因为项目定制了jackson的日期时间序列化/反序列化格式，因此这里要进行配置,不然通过management.info.git.mode=full进行完整git信息监控时会存在问题-->
-					<dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
-					<includeOnlyProperties>
-						<includeOnlyProperty>^git.build.(time|version)$</includeOnlyProperty>
-						<includeOnlyProperty>^git.commit.(id|message|time).*$</includeOnlyProperty>
-					</includeOnlyProperties>
-				</configuration>
-			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>io.github.git-commit-id</groupId>-->
+<!--				<artifactId>git-commit-id-maven-plugin</artifactId>-->
+<!--				<version>${git.commit.plugin}</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>get-the-git-infos</id>-->
+<!--						<goals>-->
+<!--							<goal>revision</goal>-->
+<!--						</goals>-->
+<!--						<phase>initialize</phase>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--				<configuration>-->
+<!--					<failOnNoGitDirectory>false</failOnNoGitDirectory>-->
+<!--					<generateGitPropertiesFile>true</generateGitPropertiesFile>-->
+<!--					&lt;!&ndash;因为项目定制了jackson的日期时间序列化/反序列化格式，因此这里要进行配置,不然通过management.info.git.mode=full进行完整git信息监控时会存在问题&ndash;&gt;-->
+<!--					<dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>-->
+<!--					<includeOnlyProperties>-->
+<!--						<includeOnlyProperty>^git.build.(time|version)$</includeOnlyProperty>-->
+<!--						<includeOnlyProperty>^git.commit.(id|message|time).*$</includeOnlyProperty>-->
+<!--					</includeOnlyProperties>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
 			<!--代码格式插件，默认使用spring 规则-->
 			<plugin>
 				<groupId>io.spring.javaformat</groupId>
