@@ -1,6 +1,7 @@
 package com.earl.common.log.event;
 
 import com.earl.admin.api.entity.SysLog;
+import com.earl.admin.api.feign.RemoteLogService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
