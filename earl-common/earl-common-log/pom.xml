@@ -18,6 +18,23 @@
             <artifactId>earl-common-core</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <!--安全依赖获取上下文信息-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security.oauth.boot</groupId>
+            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+        </dependency>
+
+        <!--ADMIN接口模块-->
+        <dependency>
+            <groupId>com.earl</groupId>
+            <artifactId>earl-admin-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 

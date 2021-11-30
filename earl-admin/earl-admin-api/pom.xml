@@ -12,5 +12,31 @@
     <groupId>com.earl</groupId>
     <artifactId>earl-admin-api</artifactId>
 
+    <dependencies>
+        <!--core 工具类-->
+        <dependency>
+            <groupId>com.earl</groupId>
+            <artifactId>earl-common-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--feign 依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <!--断路器依赖-->
+        <dependency>
+            <groupId>com.earl</groupId>
+            <artifactId>earl-common-feign</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--mybatis 依赖-->
+        <dependency>
+            <groupId>com.earl</groupId>
+            <artifactId>earl-common-mybatis</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

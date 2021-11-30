@@ -47,6 +47,9 @@
 		<jasypt.version>2.1.0</jasypt.version>
 		<swagger.fox.version>3.0.0</swagger.fox.version>
 		<xxl-job.version>2.3.0</xxl-job.version>
+		<swagger.core.version>1.5.24</swagger.core.version>
+		<oss.version>1.0.1</oss.version>
+		<mybatis-plus.version>3.4.3.4</mybatis-plus.version>
 <!--		<docker.plugin.version>0.32.0</docker.plugin.version>-->
 <!--		<docker.host>http://192.168.0.100:2375</docker.host>-->
 <!--		<docker.registry>192.168.0.100</docker.registry>-->
@@ -126,6 +129,25 @@
 				<version>${spring-cloud-alibaba.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<!-- io.swagger -->
+			<dependency>
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-annotations</artifactId>
+				<version>${swagger.core.version}</version>
+			</dependency>
+
+			<!--mybatis-plus-->
+			<dependency>
+				<groupId>com.pig4cloud.plugin</groupId>
+				<artifactId>oss-spring-boot-starter</artifactId>
+				<version>${oss.version}</version>
+			</dependency>
+			<!--orm 相关-->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis-plus.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
