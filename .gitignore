@@ -61,11 +61,3 @@ Servers
 
 ### moudule ####
 *.iml
-earl-admin/earl-admin-api/src/
-earl-admin/earl-admin-biz/src/
-earl-common/earl-common-core/src/
-earl-common/earl-common-feigin/src/
-earl-common/earl-common-log/src/
-earl-common/earl-common-mybatis/src/
-earl-common/earl-common-swagger/src/
-earl-register/src/
