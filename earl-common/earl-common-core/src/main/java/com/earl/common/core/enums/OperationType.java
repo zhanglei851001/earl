@@ -18,7 +18,9 @@ public enum OperationType {
     SELECT(1, "SELECT", "查询操作"),
     UPDATE(1, "UPDATE", "更新操作"),
     INSERT(1, "INSERT", "插入操作"),
-    ERROR(0, "ERROR", "操作失败");
+    ERROR(0, "ERROR", "操作失败"),
+    SUCCESS(200, "SUCCESS", "成功"),
+    FAIL(500, "ERROR", "失败");
 
     private final int num;
 
