@@ -12,5 +12,13 @@
     <groupId>com.earl</groupId>
     <artifactId>earl-common-log</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.earl</groupId>
+            <artifactId>earl-common-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
