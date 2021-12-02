@@ -3,23 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>earl</artifactId>
+        <artifactId>earl-common</artifactId>
         <groupId>com.earl</groupId>
         <version>2.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.earl</groupId>
-    <artifactId>earl-common</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>earl-common-core</module>
-        <module>earl-common-log</module>
-        <module>earl-common-mybatis</module>
-        <module>earl-common-swagger</module>
-        <module>earl-common-feign</module>
-        <module>earl-common-datasource</module>
-    </modules>
+    <artifactId>earl-common-feign</artifactId>
 
 
 </project>

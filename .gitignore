@@ -19,7 +19,7 @@ bin/
 *.iml
 *.ipr
 rebel.xml
-*.xml
+#*.xml
 
 ### NetBeans ###
 nbproject/private/

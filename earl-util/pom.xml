@@ -10,15 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.earl</groupId>
-    <artifactId>earl-common</artifactId>
+    <artifactId>earl-util</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>earl-common-core</module>
-        <module>earl-common-log</module>
-        <module>earl-common-mybatis</module>
-        <module>earl-common-swagger</module>
-        <module>earl-common-feign</module>
-        <module>earl-common-datasource</module>
+        <module>earl-util-code</module>
     </modules>
 
 

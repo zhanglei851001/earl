@@ -27,6 +27,7 @@
         <module>earl-common</module>
 		<module>earl-register</module>
 		<module>earl-admin</module>
+		<module>earl-util</module>
 	</modules>
     <packaging>pom</packaging>
 
